@@ -1,0 +1,13 @@
+version: "3"
+services:
+  srv:
+    build: 
+      context: ./
+      dockerfile: Dockerfile
+      target: initial
+    ports:
+      - '3000:3000'
+    volumes:
+      - .:/src
+      - ./usr_local_bunlde:/usr/local/bundle
+    tty: true
